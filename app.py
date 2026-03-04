@@ -1,11 +1,14 @@
 
+
 import streamlit as st
 from minimax import best_move
 from game_logic import check_winner, is_draw
 
+st.set_page_config(layout="centered")
 
 st.title("Tic Tac Toe - Minimax AI")
 
+st.caption("Play against an unbeatable Minimax AI")
 
 if "board" not in st.session_state:
 
@@ -31,7 +34,7 @@ def play_move(index):
 
 for row in range(3):
 
-    cols = st.columns(3)
+    cols = st.columns([1,1,1])
 
     for col in range(3):
 
